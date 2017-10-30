@@ -1,9 +1,9 @@
-var http = require('http');
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5011;
 var express = require('express');
 var app = express();
 
-app.use('/',express.static('./dist'));
+app.use('/',express.static('dist'));
 app.listen(port, () => {
     console.log('Listening to port:', port);
 });
+
