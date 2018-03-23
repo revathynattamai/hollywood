@@ -1,10 +1,10 @@
 body {
   background-color: #FFDAB9;
   background: linear-gradient(to bottom, #FFDAB9, #BDB76B);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #h01 {
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  text-align: center;
  margin: 20px;
 }
