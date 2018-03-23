@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Heading from './heading'; 
 
 export class Hello extends Component {
     render() {
         return (
-            <div>Hello World</div>
+            <Heading />
         );
     }
 }
