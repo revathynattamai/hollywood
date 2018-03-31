@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 import Heading from './heading'; 
 import InputNum from './inputNum'; 
 import TeBo from './tebo'
 
 
-
-export class Hello extends Component {
+export class App extends Component {
     render() {
         return (
             <div>
@@ -22,7 +18,5 @@ export class Hello extends Component {
     }
 }
 
-ReactDOM.render(
-    <Hello />,
-    document.getElementById('root')
-);
+
+export default App;
