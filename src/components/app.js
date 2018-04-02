@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, {Component} from "react";
 
-import Heading from './heading'; 
-import InputNum from './inputNum'; 
-import TeBo from './tebo'
+import Heading from "./heading";
+import InputNum from "./inputNum";
+
 
 
 export class App extends Component {
-    render() {
+
+    render () {
+
         return (
             <div>
-            <Heading />
-            <InputNum />
-            <TeBo />
+                <Heading />
+                <InputNum />
             </div>
         );
     }
-}
 
+}
 
 export default App;

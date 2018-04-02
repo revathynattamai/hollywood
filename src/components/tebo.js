@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
-class TeBo extends Component{
-    render(){
-        return(
-            <div>
-                <input type="text" size="1"/>
-                </div>
-
-        )
+class TeBo extends Component {
+    render() {
+        let num = this.props.addNumRed.num;
+        var input = document.createElement('input');
+        input.setAttribute('id', "input" + i);
+        document.getElementById("root").appendChild(input);
     }
 }
 
-export default TeBo;
+
+const mapStateToProps = (state) => {
+    return state;
+};
+
+export default connect(mapStateToProps)(TeBo);

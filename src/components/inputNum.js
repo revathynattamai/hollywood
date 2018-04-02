@@ -1,32 +1,49 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addNum } from '../actions'
+import { updateValue } from '../actions';
+import { TeBo } from './tebo';
+
 
 class InputNum extends Component {
+
+    onClick(inputNum, inputWord) {
+        this.props.updateValue(inputNum, inputWord);
+        //  this.inputField(this.props.addNumRed.num);
+    }
+
+    inputField(num) {
+        console.log("called");
+        for (let i = 1; i <= num; i++) {
+                return(
+                    <input type="text" size="1" />
+            );
+
+        }
+
+    }
+
     render() {
-        let input;
+        let inputNum, inputWord;
         return (
             <div id="h01">
-    
-                <table align="center">
-                <tr> Enter the number of letters: <input type="number" ref={node => input = node} min="1" max="30" required onChange={() => this.props.addNum(input)} /></tr>
-                <tr>Enter the word: <input type="password" size="30" placeholder="Maximum 30 letter" /></tr>
-
-                </table>
-
+                Enter the number of letters: <input type="number" ref={node => inputNum = node} min="1" max="30" required />
+                Enter the word: <input type="password" size="30" placeholder="Maximum 30 letter" ref={node => inputWord = node} />
+                <input type="button" value="Submit" onClick={() => this.onClick(inputNum, inputWord)} />
+                <TeBo />
             </div >
         )
     }
 }
 
+
 const mapStateToProps = (state) => {
     return state;
-  };
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addNum: (input) => {
-            dispatch(addNum(input.value));
+        updateValue: (num, word) => {
+            dispatch(updateValue(num.value, word.value));
         }
     };
 };

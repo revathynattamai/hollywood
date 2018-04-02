@@ -1,8 +1,9 @@
-const addNumRed = (state = { num: 0}, action) => {
+let updateValueRed = (state = { num: 1, word:'a'}, action) => {
     switch (action.type) {
         case 'ADD_NUMBER':
              state = {
-                num: action.payload
+                num: action.payload.num,
+                word: action.payload.text
             }
             break;
     }
@@ -10,4 +11,4 @@ const addNumRed = (state = { num: 0}, action) => {
 
 }
 
-export default addNumRed;
+export default updateValueRed;
