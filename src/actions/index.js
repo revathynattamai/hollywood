@@ -4,3 +4,10 @@ export const updateValue = (num, text) => {
     payload: {num, text}
     }
 }
+
+export const errorValue = (error) => {
+    return{
+    type: 'ADD_ERROR',
+    payload: error
+    }
+}

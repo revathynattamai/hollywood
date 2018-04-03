@@ -1,4 +1,4 @@
-let updateValueRed = (state = { num: 1, word:'a'}, action) => {
+let updateValueRed = (state = { num: 0, word:''}, action) => {
     switch (action.type) {
         case 'ADD_NUMBER':
              state = {
